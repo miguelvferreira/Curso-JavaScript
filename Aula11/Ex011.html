@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de deteçao de nacionalidade Português</h1>
+    Pais de residencia<input type="text" name="txtid" id="txtid">
+    <input type="button" value="Verificar" onclick="Verificar()">
+    <div id="res">
+    </div>
+    <script>
+        function Verificar(){
+            var txtident = window.document.getElementById('txtid')
+            var res = window.document.getElementById('res')
+            var origem = (txtid.value.toUpperCase())
+            //exemplo de uma condição composta com if e else 
+            res.innerHTML = `O seu pais de nascimento é ${origem}`
+            if (origem =='PORTUGAL'){
+                res.innerHTML+=(`<p>Você é um cidadão Português!</p>`)
+            }else{
+                res.innerHTML+=(`<p>Você é estrangeiro</p>`)
+            }
+        }
+    </script>
+</body>
+</html>
